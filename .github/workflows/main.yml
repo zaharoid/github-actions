@@ -1,0 +1,18 @@
+name: My First GitHub Action
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello, I'm Hololobov Zakhar (77605)!"
+      - name: Show runner info
+        run: |
+          uname -a
+          echo "Repo: $GITHUB_REPOSITORY"
+          echo "SHA:  $GITHUB_SHA"
